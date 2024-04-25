@@ -1,0 +1,2 @@
+#!/bin/bash
+g++ ./main.cpp ./includes/**.cpp -o ./app.exe && ./app.exe;
