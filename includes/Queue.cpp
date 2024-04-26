@@ -8,6 +8,14 @@ struct QueueNode
 
 Queue::Queue() : head(nullptr), tail(nullptr), length(0) {}
 
+Queue::~Queue()
+{
+    for (int i = 0; i < this->length; i++)
+    {
+        this->dequeue();
+    }
+};
+
 int Queue::getLength()
 {
     return this->length;
@@ -55,5 +63,3 @@ int Queue::peek()
     }
     return head->value;
 }
-
-Queue::~Queue(){};
