@@ -10,7 +10,7 @@ Queue::Queue() : head(nullptr), tail(nullptr), length(0) {}
 
 Queue::~Queue()
 {
-    for (int i = 0; i < this->length; i++)
+    while (this->length > 0)
     {
         this->dequeue();
     }
